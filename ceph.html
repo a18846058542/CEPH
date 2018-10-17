@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CEPH监控</title>
+
+    <link rel="stylesheet" href="./src/css/common.css"/>
+    <link rel="stylesheet" href="./src/css/style.css"/>
+    <link rel="stylesheet" href="./src/css/ceph.css"/>
+    <link rel="stylesheet" type="text/css" href="./src/css/main.min.css">
+</head>
+<body class="icbc-theme-white">
+<div class="wrapper clearfix">
+    <div class="fl">
+        <div id="charts">
+            <p class="chartsTitle">CEPH健康度实时监测</p>
+            <div id="icbc-main-charts"></div>
+        </div>
+        <div id="event">
+            <p class="eventTitle">CEPH事件播报</p>
+            <div class="panel-body eventList">
+                <div class="timelineProfile timeline-profile">
+                    <div class="timeline-body">
+                        <div class="timeline-title">
+                            <h5 class="text-uppercase">May 2014</h5>
+                        </div>
+                        <ol class="timeline-items">
+                            <li>
+                                <div class="timeline-box">
+                                    <p class="text-muted">5 months ago.</p>
+                                    <p>
+                                        It's awesome when we find a good solution for our projects, Fire Admin is <span class="text-primary">#awesome</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-box">
+                                    <p class="text-muted">5 months ago.</p>
+                                    <p>
+                                        What is your greatest projects for your Administrator?
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-box">
+                                    <p class="text-muted">5 months ago.</p>
+                                    <p>
+                                        What is your greatest projects for your Administrator?
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fl">
+        <div id="colonyInfo">
+            <p class="colonyTitle">集群情况</p>
+            <div class="colonyList">
+                <ul>
+                    <li class="clearfix">
+                        <p class="colonyStatus fl pr"></p>
+                        <p class="colonyName fl">集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="colonyStatus fl pr"></p>
+                        <p class="colonyName fl">集群2</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="colonyStatus fl pr"></p>
+                        <p class="colonyName fl">集群3</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="colonyStatus fl pr"></p>
+                        <p class="colonyName fl">集群4</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="colonyStatus fl pr"></p>
+                        <p class="colonyName fl">集群5</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="colonyStatus fl pr"></p>
+                        <p class="colonyName fl">集群5</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="colonyStatus fl pr"></p>
+                        <p class="colonyName fl">集群5</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="nodeInfo">
+            <p class="nodeTitle">节点情况</p>
+            <div class="nodeList">
+                <ul>
+                    <li class="clearfix">
+                        <p class="nodeStatus fl pr"></p>
+                        <p class="nodeName fl">节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="nodeStatus fl pr"></p>
+                        <p class="nodeName fl">节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="nodeStatus fl pr"></p>
+                        <p class="nodeName fl">节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="nodeStatus fl pr"></p>
+                        <p class="nodeName fl">节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="nodeStatus fl pr"></p>
+                        <p class="nodeName fl">节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="nodeStatus fl pr"></p>
+                        <p class="nodeName fl">节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="nodeStatus fl pr"></p>
+                        <p class="nodeName fl">节点1·集群1</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="fl">
+        <div id="OSDinfo">
+            <p class="OSDtitle">OSD情况</p>
+            <div class="OSDList">
+                <ul>
+                    <li class="clearfix">
+                        <p class="OSDstatus fl pr"></p>
+                        <p class="OSDNamae fl">OSD1·节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="OSDstatus fl pr"></p>
+                        <p class="OSDNamae fl">OSD1·节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="OSDstatus fl pr"></p>
+                        <p class="OSDNamae fl">OSD1·节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="OSDstatus fl pr"></p>
+                        <p class="OSDNamae fl">OSD1·节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="OSDstatus fl pr"></p>
+                        <p class="OSDNamae fl">OSD1·节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="OSDstatus fl pr"></p>
+                        <p class="OSDNamae fl">OSD1·节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="OSDstatus fl pr"></p>
+                        <p class="OSDNamae fl">OSD1·节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="OSDstatus fl pr"></p>
+                        <p class="OSDNamae fl">OSD1·节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="OSDstatus fl pr"></p>
+                        <p class="OSDNamae fl">OSD1·节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="OSDstatus fl pr"></p>
+                        <p class="OSDNamae fl">OSD1·节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="OSDstatus fl pr"></p>
+                        <p class="OSDNamae fl">OSD1·节点1·集群1</p>
+                    </li>
+                    <li class="clearfix">
+                        <p class="OSDstatus fl pr"></p>
+                        <p class="OSDNamae fl">OSD1·节点1·集群1</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <button class="cabaSearch">性能指标查询</button>
+    </div>
+</div>
+
+<script src="./src/js/jquery.min.js"></script>
+<script src="./src/js/main.min.js"></script>
+<script>
+
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('icbc-main-charts'));
+    if($("body").hasClass('icbc-theme-white')){
+        option = {
+            tooltip: {
+                trigger: 'axis',
+                backgroundColor: 'rgba(255,255,255,0.8)',
+                borderColor:"#edebee",
+                borderWidth:3,
+                padding:10,
+                textStyle:{
+                    color:"#000"
+                },
+                position: "top",
+
+            },
+            grid: {
+                left: '5%',
+                bottom: '12%',
+                top:'6%',
+                right:'5%',
+                containLabel: true
+            },
+            xAxis: {
+                // data:date,
+                type: 'category',
+                boundaryGap: false,
+                z:2,
+                splitLine:{
+                    show:true,
+                    lineStyle:{
+                        width:2,
+                        color:"#bfbfbf"
+                    }
+                },
+                axisTick:{
+                    lineStyle:{
+                        color:"#bfbfbf",
+                        width:2
+                    },
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#bfbfbf',
+                    }
+                },
+            },
+            yAxis: {
+                boundaryGap: [0, '50%'],
+                max: 100,
+                z:2,
+                splitLine:{
+                    show:true,
+                    lineStyle:{
+                        width:2,
+                        color:"#bfbfbf"
+                    }
+                },
+                axisTick:{
+                    length:0,
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#bfbfbf',
+                    }
+                },
+                type: 'value'
+            },
+            series: [
+                {
+                    // data:data,
+                    type:'line',
+                    symbol: 'none',
+                    itemStyle : {
+                        normal : {
+                            lineStyle:{
+                                color:'#6468b7',
+                                width:4
+                            }
+                        }
+                    },
+                    markPoint: {
+                        // data: [
+                        //     {
+                        //     	type: 'min',
+                        //     	symbol: 'image://../src/images/chart-serious.png',
+                        //     	symbolSize: [16, 16],
+                        //     },
+                        //     {
+                        //     	type: 'max',
+                        //     	symbol: 'image://../src/images/chart-serious.png',
+                        //     	symbolSize: [16, 16],
+                        //     },
+                        // ],
+                    },
+                    markArea: {
+                        silent: true,
+                        label: {
+                            normal: {
+                                position: ['-7%', '50%'],
+                                textStyle:{
+                                    color:"#adadad",
+                                    fontSize:18
+                                }
+                            }
+                        },
+                        data: [
+                            [{
+                                name: '健康',
+                                yAxis: 80,
+                                itemStyle: {
+                                    normal: {
+                                        color: '#c7f0d4'
+                                    }
+                                },
+                            }, {
+                                yAxis: 1000
+                            }],
+                            [{
+                                name: '关注',
+                                yAxis: 60,
+                                itemStyle: {
+                                    normal: {
+                                        color: '#ffe4cf'
+                                    }
+                                },
+                            }, {
+                                yAxis: 80,
+                            }],
+                            [{
+                                name: '严重',
+                                yAxis: 0,
+                                itemStyle: {
+                                    normal: {
+                                        color: '#ffd7d7'
+                                    }
+                                }
+                            }, {
+                                yAxis: 60,
+                            }]
+                        ]
+                    },
+                }
+            ],
+            dataZoom: [
+                {   // 这个dataZoom组件，默认控制x轴。
+                    type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
+                    start: 80,      // 左边在 10% 的位置。
+                    end: 100,        // 右边在 60% 的位置。
+                    filterMode: 'empty'
+                }
+            ]
+        };
+    }else if($("body").hasClass('icbc-theme-black')){
+        option = {
+            tooltip: {
+                trigger: 'axis',
+                backgroundColor: 'rgba(255,255,255,0.8)',
+                borderColor:"#edebee",
+                borderWidth:3,
+                padding:10,
+                textStyle:{
+                    color:"#000"
+                },
+                position: "top",
+
+            },
+            grid: {
+                left: '5%',
+                bottom: '12%',
+                top:'6%',
+                right:'5%',
+                containLabel: true
+            },
+            xAxis: {
+                // data:date,
+                type: 'category',
+                boundaryGap: false,
+                z:2,
+                splitLine:{
+                    show:true,
+                    lineStyle:{
+                        width:2,
+                        color:"#646b87"
+                    }
+                },
+                axisTick:{
+                    lineStyle:{
+                        color:"#646b87",
+                        width:2
+                    },
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#646b87',
+                    }
+                },
+            },
+            yAxis: {
+                boundaryGap: [0, '50%'],
+                max: 100,
+                z:2,
+                splitLine:{
+                    show:true,
+                    lineStyle:{
+                        width:2,
+                        color:"#646b87"
+                    }
+                },
+                axisTick:{
+                    length:0,
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#646b87',
+                    }
+                },
+                type: 'value'
+            },
+            series: [
+                {
+                    // data:data,
+                    type:'line',
+                    symbol: 'none',
+                    itemStyle : {
+                        normal : {
+                            lineStyle:{
+                                color:'#3bc3ee',
+                                width:4
+                            }
+                        }
+                    },
+                    markPoint: {
+                        // data: [
+                        //     {
+                        //     	type: 'min',
+                        //     	symbol: 'image://../src/images/chart-serious.png',
+                        //     	symbolSize: [16, 16],
+                        //     },
+                        //     {
+                        //     	type: 'max',
+                        //     	symbol: 'image://../src/images/chart-serious.png',
+                        //     	symbolSize: [16, 16],
+                        //     },
+                        // ],
+                    },
+                    markArea: {
+                        silent: true,
+                        label: {
+                            normal: {
+                                position: ['-7%', '50%'],
+                                textStyle:{
+                                    color:"#adadad",
+                                    fontSize:18
+                                }
+                            }
+                        },
+                        data: [
+                            [{
+                                name: '健康',
+                                yAxis: 80,//cad4fe
+                                itemStyle: {
+                                    normal: {
+                                        color: '#284a48'
+                                    }
+                                }
+                            }, {
+                                yAxis: 1000
+                            }],
+                            [{
+                                name: '关注',
+                                yAxis: 60,
+                                itemStyle: {
+                                    normal: {
+                                        color: '#524734'
+                                    }
+                                },
+                            }, {
+                                yAxis: 80,
+                            }],
+                            [{
+                                name: '严重',
+                                yAxis: 0,
+                                itemStyle: {
+                                    normal: {
+                                        color: '#422b3f'
+                                    }
+                                }
+                            }, {
+                                yAxis: 60,
+                            }]
+                        ]
+                    },
+                }
+            ],
+            dataZoom: [
+                {   // 这个dataZoom组件，默认控制x轴。
+                    type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
+                    start: 80,      // 左边在 10% 的位置。
+                    end: 100,        // 右边在 60% 的位置。
+                    filterMode: 'empty',
+                    dataBackground:{
+                        areaStyle:{
+                            color:'#767e9e'
+                        }
+                    },
+                    borderColor:'#767e9e'
+                }
+            ]
+        };
+    }
+    function addData() {
+        var xAxis = [],
+                series = [],
+                serious=[],
+                threshold=0,
+                now = new Date(),
+                length=0;
+        //循环出60个数据
+        for (var i = 1; i < 60; i++) {
+            now.setSeconds(now.getSeconds() + 1);//1分钟的时间数据，当前时间到当前时间后1分钟
+            var tip_html='<p class="jk">主机健康</p>',//点的悬浮框内容
+                    num=(Math.random()*100).toFixed(1) - 0,//纵坐标的刻度，100以内的随机数
+                    time=[now.getHours(),now.getMinutes(),now.getSeconds()].join(':');//横坐标的刻度。时：分：秒
+            if(num<=60){
+                serious.push({
+                    type: 'serious',
+                    symbol: 'image://./src/images/chart-serious.png',//严重范围的图标
+                    symbolSize: [16, 16],
+                    coord: [time, num],//图标坐标
+                    symbolOffset:['0', '13'],
+                    label:{
+                        normal: {
+                            show:false
+                        }
+                    }
+                })
+                threshold=num;
+                length=series.length;
+                setTimeout(function(){
+                    //严重范围，悬浮框出现
+                    myChart.dispatchAction({
+                        type: 'showTip',
+                        seriesIndex:0 ,//第几条series
+                        dataIndex: length//第几个tooltip
+                    })
+                },300)
+                tip_html='<p class="yz">4级警告：MQ中断造成QR中断</p>';//严重范围点的悬浮框内容
+            }
+            if(num>60 && threshold!=0){
+                threshold=0;
+                serious.push({
+                    type: 'serious',
+                    symbol: 'image://./src/images/chart-serious-jk2.png',//从严重到健康的转折点图标
+                    symbolSize: [16, 16],
+                    coord: [time, num],
+                    symbolOffset:['0', '0'],
+                    label:{
+                        normal: {
+                            show:false
+                        }
+                    }
+                })
+                length=series.length;
+                setTimeout(function(){
+                    //回到健康范围，悬浮框消失
+                    myChart.dispatchAction({
+                        type: 'hideTip',
+                        seriesIndex:0 ,//第几条series
+                        dataIndex: length-1//第几个tooltip
+                    })
+                },300)
+                tip_html='<p class="jk">主机健康</p>';//健康范围点的悬浮框内容
+            }
+            xAxis.push(time);//横坐标数组
+            series.push({value:num,name:tip_html});//纵坐标数组
+        }
+        setTimeout(function(){
+            myChart.setOption({
+                tooltip:{
+                    formatter: function (params) {
+                        var res='<div class="tip"><time>'+params[0].name+'</time>'+params[0].data.name+'</div>'//设置悬浮框内容
+                        return res;
+                    },
+                    // alwaysShowContent:true
+                },
+                xAxis: {
+                    data: xAxis,//设置横坐标
+                },
+                series: [{
+                    data: series,//设置纵坐标
+                    markPoint:{
+                        data:serious,//设置点的图标
+                    }
+                }],
+            });
+        },10)
+    }
+    addData();
+    var s=setInterval(function () {
+        addData();//5秒重绘一次图表
+    }, 5000);
+    myChart.setOption(option);
+    window.onresize=function(){
+        myChart.resize();
+    }
+</script>
+</body>
+</html>
